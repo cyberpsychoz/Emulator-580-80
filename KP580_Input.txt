@@ -1,0 +1,33 @@
+Подпрограмма 1 [0000h - 0012h]
+
+	0000	06	MVI B, d8
+	0001	7F	MOV A, A
+	0002	0E	MVI C, d8
+	0003	FF	RST 7
+	0004	78	MOV A, B
+	0005	D3	OUT N
+	0006	00	NOP
+	0007	79	MOV A, C
+	0008	D3	OUT N
+	0009	00	NOP
+	000A	05	DCR B
+	000B	0D	DCR C
+	000C	3E	MVI A, d8
+	000D	00	NOP
+	000E	91	SUB C
+	000F	C2	JNZ adr
+	0010	04	INR B
+	0011	00	NOP
+	0012	76	HLT
+
+
+
+Содержимое регистров:
+
+A = 00h
+B = 80h		C = 00h
+D = 00h		E = 00h
+H = 00h		L = 00h
+W = 00h		Z = 04h
+PC = 0013h
+SP = FFFFh
